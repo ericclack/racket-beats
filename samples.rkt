@@ -6,7 +6,8 @@
 
 (provide clap kick cowbell stick cymbal cymbal-j cymbal-r
          hh hh-r hh2 snare-j snare tom-hi tom-lo tom-mid
-         hh2-q)
+         hh2-q
+         808-hh-c 808-hh-o 808-hh-p 808-kick 808-kick-l)
 
 (require racket/gui/base)
 
@@ -29,6 +30,14 @@
 (define (tom-hi)       (play "mp3/tom_Rock_hi.mp3"))
 (define (tom-lo)       (play "mp3/tom_Rock_lo.mp3"))
 (define (tom-mid)      (play "mp3/tom_Rock_mid.mp3"))
+
+
+(define (808-hh-c)   (play "mp3/808_Hat_Closed.mp3"))
+(define (808-hh-o)   (play "mp3/808_Hat_Open.mp3"))
+(define (808-hh-p)   (play "mp3/808_Hat_Pedal.mp3"))
+
+(define (808-kick)   (play "mp3/808_Kick_Short.mp3"))
+(define (808-kick-l)   (play "mp3/808_Kick_Long.mp3"))
 
 (define (play sample)
   ;; Async play of sample
