@@ -5,7 +5,8 @@
 ;; This program is distributed under the terms of the GNU GPL
 
 (provide clap kick cowbell stick cymbal cymbal-j cymbal-r
-         hh hh-r hh2 snare-j snare tom-hi tom-lo tom-mid)
+         hh hh-r hh2 snare-j snare tom-hi tom-lo tom-mid
+         hh2-q)
 
 (require racket/gui/base)
 
@@ -20,6 +21,7 @@
 (define (hh)           (play "mp3/hhc_Dry_a.mp3"))
 (define (hh-r)         (play "mp3/hhc_Rock_b.mp3"))
 (define (hh2)          (play "mp3/hhp_Dry_a.mp3"))
+(define (hh2-q)        (play "mp3/hhp_Dry_a-quiet.mp3"))
 
 (define (snare-j)      (play "mp3/sn_Jazz_c.mp3"))
 (define (snare)        (play "mp3/sn_Wet_b.mp3"))

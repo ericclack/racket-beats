@@ -6,40 +6,47 @@
 
 (require "beats.rkt" "samples.rkt")
 
-(bpm 90)
-
-(define (intro)
-  (4-times
-   (stick)
-   (-..-)
-   ))
-
-(define (body)
-  (4-times
-
-   (kick) (clap)
-
-   (-.-)
-
-                 (hh)
-   
-   (-.-)
-
-   (kick) (cowbell) 
-
-   (-.-)
-
-          (cowbell) (hh)
-
-   (-.-)
-
-   
-  )
-)
+(bpm 120)
 
 (define (song)
-  (intro)
-  (body)
+  (4-times
+
+   (hh2-q)
+   (-.-)
+   (-.-)
+   (hh2-q)
+   (-.-)
+   (-.-)   
+
+   ;;--------------
+
+   (hh2-q)
+   (-.-)
+   (-.-)
+   (hh2-q)
+   (-.-)
+   (-.-)
+
+   ;;--------------
+
+   (hh2-q)
+   (-.-)
+   (-.-)
+   (hh2-q)
+   (-.-)
+   (hh)
+   (-.-)
+
+   ;;--------------
+
+   (hh2-q)
+   (-.-)
+   (-.-)
+   (hh2-q)
+   (-.-)
+   (-.-)
+
+   )
 )
 
 (song)

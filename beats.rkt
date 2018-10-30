@@ -4,7 +4,9 @@
 ;; Copyright Eric Clack, 2018
 ;; This program is distributed under the terms of the GNU GPL
 
-(provide bpm 2-times 4-times 8-times -.- -..- -....-)
+(provide bpm 2-times 4-times 8-times
+         do-times
+         -.- -..- -....-)
 
 (define bpm
   (make-parameter 120))
@@ -18,7 +20,11 @@
 
 (define-syntax-rule (8-times body ...)
   (for ([i (in-range 8)])
-            body ...))
+       body ...))
+
+(define-syntax-rule (do-times n body ...)
+  (for ([i (in-range n)])
+       body ...))
 
 (define (-....-)
   ;; Full beat pause
