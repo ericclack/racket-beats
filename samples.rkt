@@ -15,7 +15,7 @@
 (define (stick)        (play "mp3/stick_Woody.mp3"))
 
 (define (cymbal)       (play "mp3/cym_Jazz.mp3"))
-(define (cymbal-j) (play "mp3/cra_Jazz.mp3"))
+(define (cymbal-j)     (play "mp3/cra_Jazz.mp3"))
 (define (cymbal-r)     (play "mp3/cym_Rock_b.mp3"))
 (define (hh)           (play "mp3/hhc_Dry_a.mp3"))
 (define (hh-r)         (play "mp3/hhc_Rock_b.mp3"))

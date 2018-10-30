@@ -5,7 +5,7 @@ Is it possible to make a drum machine in Racket?
 
 Almost everything! In no particular order yet...
 
-* BPM
+* BPM - is the maths right especially with pause functions?
 * Add generic n-times, where n is a natural number
 * Change volume of samples
 * Multiple tracks (drums, bass) etc
