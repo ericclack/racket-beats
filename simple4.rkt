@@ -6,6 +6,8 @@
 
 (require "beats.rkt" "samples.rkt")
 
+(bpm 90)
+
 (define (intro)
   (4-times
    (stick)

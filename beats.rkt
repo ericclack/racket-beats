@@ -4,7 +4,10 @@
 ;; Copyright Eric Clack, 2018
 ;; This program is distributed under the terms of the GNU GPL
 
-(provide 2-times 4-times ---)
+(provide bpm 2-times 4-times ---)
+
+(define bpm
+  (make-parameter 120))
 
 (define-syntax-rule (2-times body ...)
   (begin body ... body ...))
@@ -14,5 +17,6 @@
             body ...))
 
 (define (---)
-  (sleep .25))
+  ;; half beat pause
+  (sleep (/ 60 (* 2 (bpm)))))
 
