@@ -13,11 +13,11 @@
   (begin body ... body ...))
 
 (define-syntax-rule (4-times body ...)
-  (for/list ([i (in-range 4)])
+  (for ([i (in-range 4)])
             body ...))
 
 (define-syntax-rule (8-times body ...)
-  (for/list ([i (in-range 8)])
+  (for ([i (in-range 8)])
             body ...))
 
 (define (-....-)
