@@ -9,7 +9,11 @@
 (define-syntax-rule (2-times body ...)
   (begin body ... body ...))
 
-(define (wait)
+(define-syntax-rule (4-times body ...)
+  (begin body ... body ... body ... body ... body ... body ...))
+
+
+(define (---)
   (sleep .25))
 
 (define (clap)
@@ -18,31 +22,42 @@
 (define (kick)
   (play-sound "mp3/kick_Dry_b.mp3" true))
 
+(define (cymbal)
+  (play-sound "mp3/cra_Jazz.mp3" true))
+
   
 
 (define (intro)
   (2-times
    (clap)(kick)
-     (wait)
-   (kick)
-     (wait)
+   (---)
+   (cymbal)
+   (---)
    (clap)
-     (wait)
+   (---)
    (clap)
-     (wait)
+   (---)
    ))
 
 (define (body)
-  (2-times
+  (4-times
    (clap)
-   (sleep .25)
+   (---)
    (kick)
-   (sleep .25)))
+   (---)))
+
+(define (outro)
+  (4-times
+   (kick)
+   (---)
+   (kick)
+   (---)
+   (kick)
+   (---)))
 
 (define (song)
   (intro)
-  (body))
+  (body)
+  (outro))
 
 (song)
-
-

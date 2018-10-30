@@ -7,12 +7,12 @@
 (require "beats.rkt" "samples.rkt")
 
 (define (intro)
-  (2-times
+  (4-times
    (stick)
    (---)
    (cymbal)
    (---)
-   (clap)
+   (clap)(stick)
    (---)
    (clap)
    (---)
@@ -28,8 +28,6 @@
 (define (outro)
   (4-times
    (kick)
-   (---)
-   (---)
    (---)))
 
 (define (song)
