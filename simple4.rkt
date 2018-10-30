@@ -8,31 +8,41 @@
 
 (bpm 90)
 
+(define (pre-intro)
+  (8-times
+   (stick)
+   (-.-)))
+
 (define (intro)
   (4-times
    (stick)
-   (---)
+   (-..-)
    (cymbal)
-   (---)
+   (-..-)
    (clap)(stick)
-   (---)
-   (clap)
-   (---)
+   (-..-)
+   (cowbell)
+   (-..-)
    ))
 
 (define (body)
   (4-times
    (clap)
-   (---)
+   (-..-)
    (kick)
-   (---)))
+   (-.-)
+   (kick) (cowbell)
+   (-.-)
+   (cowbell)
+   (-.-)(-.-)))
 
 (define (outro)
   (4-times
    (kick)
-   (---)))
+   (-..-)))
 
 (define (song)
+  (pre-intro)
   (intro)
   (body)
   (outro))

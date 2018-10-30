@@ -4,7 +4,7 @@
 ;; Copyright Eric Clack, 2018
 ;; This program is distributed under the terms of the GNU GPL
 
-(provide bpm 2-times 4-times ---)
+(provide bpm 2-times 4-times 8-times -.- -..- -....-)
 
 (define bpm
   (make-parameter 120))
@@ -16,7 +16,18 @@
   (for/list ([i (in-range 4)])
             body ...))
 
-(define (---)
-  ;; half beat pause
+(define-syntax-rule (8-times body ...)
+  (for/list ([i (in-range 8)])
+            body ...))
+
+(define (-....-)
+  ;; Full beat pause
+  (sleep (/ 60 (bpm))))
+
+(define (-..-)
+  ;; Half beat pause
   (sleep (/ 60 (* 2 (bpm)))))
 
+(define (-.-)
+  ;; Quarter beat pause
+  (sleep (/ 60 (* 4 (bpm)))))
