@@ -6,7 +6,8 @@
 
 (provide bpm 2-times 4-times 8-times
          do-times
-         -.- -..- -....-)
+         -.- -..- -....-
+         -3- -33- -333-)
 
 (define bpm
   (make-parameter 120))
@@ -15,12 +16,10 @@
   (begin body ... body ...))
 
 (define-syntax-rule (4-times body ...)
-  (for ([i (in-range 4)])
-            body ...))
+  (do-times 4 body ...))
 
 (define-syntax-rule (8-times body ...)
-  (for ([i (in-range 8)])
-       body ...))
+  (do-times 8 body ...))
 
 (define-syntax-rule (do-times n body ...)
   (for ([i (in-range n)])
@@ -37,3 +36,15 @@
 (define (-.-)
   ;; Quarter beat pause
   (sleep (/ 60 (* 4 (bpm)))))
+
+(define (-333-)
+  ;; Full beat pause
+  (sleep (/ 60 (bpm))))
+
+(define (-33-)
+  ;; 2/3 beat pause
+  (sleep (/ 60 (/ 2 (* 3 (bpm))))))
+
+(define (-3-)
+  ;; third beat pause
+  (sleep (/ 60 (* 3 (bpm)))))
