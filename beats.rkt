@@ -4,9 +4,9 @@
 ;; Copyright Eric Clack, 2018
 ;; This program is distributed under the terms of the GNU GPL
 
-(provide bpm 2-times 4-times 8-times
-         do-times
-         -1- -1/2- -1/4- -1/8-
+(provide bpm 2-times 4-times 8-times do-times
+         -pause-
+         -1- -1/2- -1/4- -1/8- -1/16- -1/32-
          -1/3- -2/3-)
 
 (define bpm
@@ -25,9 +25,6 @@
   (for ([i (in-range n)])
        body ...))
 
-(define (-pause- fraction)
-  (sleep (* fraction (/ 60 (bpm)))))
-
 (define (-1-)
   ;; Full beat pause
   (sleep (/ 60 (bpm))))
@@ -35,20 +32,14 @@
 (define (-1/2-)
   ;; Half beat pause
   (-pause- 1/2))
-;;  (sleep (/ 60 (* 2 (bpm)))))
 
-(define (-1/4-)
-  ;; Quarter beat pause
-  (sleep (/ 60 (* 4 (bpm)))))
+(define (-1/4-)    (-pause- 1/4))
+(define (-1/8-)    (-pause- 1/8))
+(define (-1/16-)   (-pause- 1/16))
+(define (-1/32-)   (-pause- 1/32))
 
-(define (-1/8-)
-  (sleep (/ 60 (* 8 (bpm)))))
+(define (-1/3-)    (-pause- 1/3))
+(define (-2/3-)    (-pause- 2/3))
 
-(define (-1/3-)
-  ;; third beat pause
-  (sleep (/ 60 (* 3 (bpm)))))
-
-(define (-2/3-)
-  ;; 2/3 beat pause
-  (sleep (/ 60 (/ 2 (* 3 (bpm))))))
-
+(define (-pause- fraction)
+  (sleep (* fraction (/ 60 (bpm)))))
