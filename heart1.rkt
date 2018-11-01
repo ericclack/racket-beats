@@ -6,10 +6,8 @@
 
 (require "beats.rkt" "samples.rkt")
 
-(bpm 240)
-
-(define (pattern1)
-  (8-times
+(define (heart-beats)
+  (4-times
 
    (808-kick) (808-hh-p)
    (-..-)
@@ -36,4 +34,11 @@
    )
 )
 
-(pattern1)
+(bpm 240)
+(heart-beats)
+(bpm 250)
+(heart-beats)
+(bpm 260)
+(heart-beats)
+(bpm 270)
+(heart-beats)
