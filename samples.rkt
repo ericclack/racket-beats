@@ -32,11 +32,11 @@
 (define (tom-mid)      (play "mp3/tom_Rock_mid.mp3"))
 
 
-(define (808-hh-c)   (play "mp3/808_Hat_Closed.mp3"))
-(define (808-hh-o)   (play "mp3/808_Hat_Open.mp3"))
-(define (808-hh-p)   (play "mp3/808_Hat_Pedal.mp3"))
+(define (808-hh-c)     (play "mp3/808_Hat_Closed.mp3"))
+(define (808-hh-o)     (play "mp3/808_Hat_Open.mp3"))
+(define (808-hh-p)     (play "mp3/808_Hat_Pedal.mp3"))
 
-(define (808-kick)   (play "mp3/808_Kick_Short.mp3"))
+(define (808-kick)     (play "mp3/808_Kick_Short.mp3"))
 (define (808-kick-l)   (play "mp3/808_Kick_Long.mp3"))
 
 (define (play sample)
