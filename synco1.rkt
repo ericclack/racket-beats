@@ -6,44 +6,75 @@
 
 (require "beats.rkt" "samples.rkt")
 
-(bpm 160)
+(bpm 125)
 
 (define (pattern1)
+  ;; 4 quarters between each kick
   (4-times
 
-   (hh2) (clap)
-   (-.-)
-   (-.-)  
+   (808-hh-p) (808-kick)
+   (-1/2-)
+   
+   (808-hh-p)
+   (-1/2-)
 
-   ;;--------------
+   (808-hh-p) (808-kick)
+   (-1/2-)
 
-   (hh2-q)
-   (-.-)
-   (-.-)
+   (808-hh-p)
+   (-1/2-)
 
-   ;;--------------
+   (808-hh-p)
+   (-1/4-)
+              (808-kick)
+   (-1/4-)  
 
-   (hh2-q) (kick)
-   (-.-)
-   (-.-)
+   (808-hh-p)
+   (-1/2-)
 
-   ;;--------------
+   (808-hh-p) (808-kick)
+   (-1/2-)
 
-   (hh2-q)
-   (-.-)
-   (-.-)
+   (808-hh-p)
+   (-1/2-)
 
-   )
+  )
 )
 
-(define (claps num-beats)
-  (do-times num-beats
+(define (pattern2)
+  ;; 4 quarters between each kick
+  (4-times
 
-   (clap)
-   (-....-)))
+   (808-hh-p) (808-kick)
+   (-1/2-)
+   
+   (808-hh-p)
+   (-1/2-)
 
-(2-times
- (pattern1)
- (claps 4)
+   (808-hh-p) (808-kick)
+   (-1/2-)
+
+   (808-hh-p)
+   (-1/2-)
+
+   (808-hh-p)
+   (-1/4-)
+              (808-kick)
+   (-1/8-)  
+                          (kick)
+   (-1/8-)  
+
+   (808-hh-p)
+   (-1/2-)
+
+   (808-hh-p) (808-kick)
+   (-1/2-)
+
+   (808-hh-p)
+   (-1/2-)
+
+  )
 )
+
 (pattern1)
+(pattern2)
