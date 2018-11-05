@@ -7,7 +7,8 @@
 (provide bpm 2-times 4-times 8-times do-times
          -pause-
          -1- -1/2- -1/4- -1/8- -1/16- -1/32-
-         -1/3- -2/3-)
+         -1/3- -2/3-
+         -1/5-)
 
 (define bpm
   (make-parameter 120))
@@ -40,6 +41,8 @@
 
 (define (-1/3-)    (-pause- 1/3))
 (define (-2/3-)    (-pause- 2/3))
+
+(define (-1/5-)    (-pause- 1/5))
 
 (define (-pause- fraction)
   (sleep (* fraction (/ 60 (bpm)))))
