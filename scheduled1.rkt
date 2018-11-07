@@ -4,6 +4,7 @@
 ;; Copyright Eric Clack, 2018
 ;; This program is distributed under the terms of the GNU GPL
 
+;; Example code -- won't run
 
 (require racket/gui/base)
 

@@ -4,7 +4,7 @@
 ;; Copyright Eric Clack, 2018
 ;; This program is distributed under the terms of the GNU GPL
 
-(require "beats.rkt" "samples.rkt")
+(require "lib/beats.rkt" "lib/samples.rkt")
 
 (bpm 125)
 
@@ -22,14 +22,14 @@
 )
 
 (define (pattern2)
-  (4-times
+  (2-times
    (kick)      (cymbal)
    (-1/3-)
    (kick)      (cymbal)
    (-1/3-)
    (kick)      (cymbal)
    (-1/3-)
-   )
+  )
 )  
 
 
