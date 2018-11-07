@@ -11,21 +11,34 @@
 (define (pattern1)
   (kick)      (cymbal)
   (-1-)
-
   (snare-j)   (cymbal)
   (-1-)
-
   (kick)      (cymbal)
   (-1-)
-
   (snare-j)   (cymbal-r)
   (-1/3-)
-  (-1/3-)     (cymbal)
-  (-1/3-)     
+  (-1/3-)     (cymbal-j)
+  (-1/3-)
 )
+
+(define (pattern2)
+  (4-times
+   (kick)      (cymbal)
+   (-1/3-)
+   (kick)      (cymbal)
+   (-1/3-)
+   (kick)      (cymbal)
+   (-1/3-)
+   )
+)  
+
+
+(2-times
+ (pattern1)
+)
+
+(pattern2)
 
 (4-times
  (pattern1)
- ;(pattern2)
-
- )
+)
