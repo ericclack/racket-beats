@@ -6,43 +6,23 @@
 
 (require "lib/beats.rkt" "lib/samples.rkt")
 
-(define (pattern0)
+(define (hh-pattern)
+  (3-times
+   (-1/2-)
+   (hh2)
+   (-1/2-)
+   )
+  (-1-))
+
+(define (drum-pattern)
   (kick)
-  (-1/2-)
-  (808-hh-c)
-  (-1/2-)
+  (-1-)
 
   (kick)
-  (-1/2-)
-  (808-hh-c)
-  (-1/2-)
+  (-1-)
 
   (kick)
-  (-1/2-)
-  (808-hh-c)
-  (-1/2-)
-
-  (snare)(kick)
-  (-1/2-)
-  (808-hh-c)
-  (-1/2-)
-)
-
-(define (pattern1)
-  (kick)
-  (-1/2-)
-  (808-hh-c)
-  (-1/2-)
-
-  (kick)
-  (-1/2-)
-  (808-hh-c)
-  (-1/2-)
-
-  (kick)
-  (-1/2-)
-  (808-hh-c)
-  (-1/2-)
+  (-1-)
 
   (snare)(kick)
   (-1/3-)
@@ -51,15 +31,14 @@
   (snare)
   (-1/3-)
 )
-
 
 (bpm 180)
 
+
 (4-times
- 
-(thread
- (lambda () (pattern0)))
+ (hh2)
+ (-1-))
 
-(pattern1)
-
+(4-times
+ (parallel (hh-pattern) (drum-pattern))
 )
