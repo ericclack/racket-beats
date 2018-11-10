@@ -36,6 +36,7 @@
 ;; Scheduling --------------------------
 
 (define-syntax-rule (parallel fn1 fn2)
+  ;; Assume both fn1 and fn2 take the same time
   (begin
     (thread (thunk fn1))
     fn2))

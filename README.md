@@ -41,10 +41,11 @@ The samples you can use are defined in `lib/samples.rkt` and are from (and Copyr
 Almost everything! In no particular order yet...
 
 * BPM - is the maths right especially with pause functions?
-* Add generic n-times, where n is a natural number
 * Change volume of samples
-* Play multiple tracks (drums, bass) etc
+* Play more than 2 tracks in parallel (drums, bass) etc
 
 # Done
 
+* Play 2 tracks (drums, bass) etc
 * Can set BPM with `(bpm 180)`
+* Add generic n-times, where n is a natural number
