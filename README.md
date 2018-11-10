@@ -2,7 +2,7 @@
 Is it possible to make a drum machine in Racket?
 Might this be a good way to learn a bit of Scheme?
 
-You can see the evolution of the library in the files `simple1.rkt` to `simple4.rkt`. Take a look at the other files to see and hear some drum patterns.
+You can see the evolution of the library in the files `proto/evo1.rkt` to `proto/evo4.rkt`. Take a look at the other files to see and hear some drum patterns.
 
 The samples you can use are defined in `lib/samples.rkt` and are from (and Copyright) Hydrogen drum machine.
 
