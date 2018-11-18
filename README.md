@@ -2,7 +2,7 @@
 Is it possible to make a drum machine in Racket?
 Might this be a good way to learn a bit of Racket (and therefore Scheme)?
 
-Take a look at the files in the root directory to see and hear some drum patterns. Find out how to [Get Started](https://github.com/ericclack/racket-beats/wiki).
+Find out how to [Get Started](https://github.com/ericclack/racket-beats/wiki), or take a look at the files in the root directory to see and hear some drum patterns. 
 
 The samples you can use are defined in [lib/samples.rkt](https://github.com/ericclack/racket-beats/blob/master/lib/samples.rkt) and are from (and Copyright) Hydrogen drum machine.
 
