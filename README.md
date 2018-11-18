@@ -12,7 +12,7 @@ I should point out that I'm not a talented drummer!
 
 ```
 #lang racket
-(require "lib/beats.rkt" "lib/samples.rkt")
+(require "lib/beats.rkt")
 
 (bpm 120)
 
