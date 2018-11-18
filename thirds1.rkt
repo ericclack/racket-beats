@@ -6,7 +6,7 @@
 
 ;; Mix of half beats and third beats
 
-(require "lib/beats.rkt" "lib/samples.rkt")
+(require "lib/beats.rkt")
 
 (bpm 120)
 

@@ -8,7 +8,7 @@
 ;; and Billy Brooks, Fourty Days
 ;; https://www.whosampled.com/sample/2185/A-Tribe-Called-Quest-Lucien-Revolucien-Luck-of-Lucien-Billy-Brooks-Fourty-Days/
 
-(require "lib/beats.rkt" "lib/samples.rkt")
+(require "lib/beats.rkt")
 
 (bpm 180)
 
