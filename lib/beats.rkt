@@ -5,7 +5,7 @@
 ;; This program is distributed under the terms of the GNU GPL
 
 (provide bpm
-         2-times 3-times 4-times 8-times do-times
+         2-times 3-times 4-times 8-times repeat
          parallel
          -pause-
          -1- -1/2- -1/4- -1/8- -1/16- -1/32-
@@ -21,15 +21,15 @@
   (begin body ... body ...))
 
 (define-syntax-rule (3-times body ...)
-  (do-times 3 body ...))
+  (repeat 3 body ...))
 
 (define-syntax-rule (4-times body ...)
-  (do-times 4 body ...))
+  (repeat 4 body ...))
 
 (define-syntax-rule (8-times body ...)
-  (do-times 8 body ...))
+  (repeat 8 body ...))
 
-(define-syntax-rule (do-times n body ...)
+(define-syntax-rule (repeat n body ...)
   (for ([i (in-range n)])
        body ...))
 
