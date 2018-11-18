@@ -22,23 +22,21 @@
 )
 
 (define (pattern2)
-  (2-times
+  (4-times
    (kick)      (cymbal)
    (-1/3-)
-   (kick)      (cymbal)
+   (kick)      
    (-1/3-)
-   (kick)      (cymbal)
+   (kick)      
    (-1/3-)
   )
 )  
 
 
 (2-times
- (pattern1)
-)
+ (pattern1))
 
 (pattern2)
 
 (4-times
- (pattern1)
-)
+ (pattern1))

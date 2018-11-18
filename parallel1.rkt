@@ -32,13 +32,14 @@
   (-1/3-)
 )
 
-(bpm 180)
+(bpm 150)
 
-
+;; count in
 (4-times
  (hh2)
  (-1-))
 
+;; main pattern
 (4-times
  (parallel (hh-pattern) (drum-pattern))
 )

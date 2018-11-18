@@ -25,7 +25,4 @@
 )
 
 (4-times
- (pattern1)
- ;(pattern2)
-
- )
+ (pattern1))

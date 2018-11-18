@@ -6,7 +6,7 @@
 
 (require "lib/beats.rkt" "lib/samples.rkt")
 
-(bpm 120)
+(bpm 140)
 
 (define (pattern1)
   (clap)(hh) ;; Clap and High Hat played together
@@ -15,6 +15,8 @@
   (-1-) ;; wait a beat
   (clap)
   (-1-) ;; wait a beat
+  ;; rest
+  (-1-)
   )
 
 (4-times
