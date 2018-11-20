@@ -13,16 +13,16 @@
 (bpm 180)
 
 (define (pattern1)
-  (808-hh-p)
   (808-kick)
+  (808-hh-p)
   (-1-)
 
-  (808-hh-p)
   (808-kick)
+  (808-hh-p)
   (-1-)
 
-  (808-hh-p)
   (808-kick)
+  (808-hh-p)
   (-1-)
 
   (808-hh-p)
@@ -30,49 +30,32 @@
 )
 
 (define (pattern2)
-  (808-hh-p)
   (808-kick)
-  (-1-)
-
   (808-hh-p)
-  (808-kick)
-  (-1-)
+  (-1/2-)
+  (808-kick .5)
+  (-1/2-)
 
+  (808-kick)
   (808-hh-p)
-  (808-kick)
-  (-1-)
-
-  (808-hh-p)(808-snare1)
   (-1/3-)
+  (808-kick .5)
   (-1/3-)
-  (808-kick)
+  (808-kick .5)
   (-1/3-)
-)
 
-(define (pattern3)
-  (808-hh-p)
   (808-kick)
-  (-1-)
-
   (808-hh-p)
   (-1-)
 
+
   (808-hh-p)
   (-1-)
-
-  (808-hh-p)(808-snare1)
-  (-1/3-)
-  (-1/3-)
-  
-  (808-kick)
-  (-1/3-)
 )
 
 
 
-(pattern1)
-(4-times 
- (pattern3)
+(4-times
+ (pattern1)
  (pattern2)
 )
-;(pattern1)
