@@ -32,7 +32,7 @@ I should point out that I'm not a talented drummer!
 
 # To Do
 
-* Change volume of samples
+* Change volume of samples // explore whether rsound library would enable this and other features we might want
 * Play more than 2 tracks in parallel (drums, bass) etc
 
 ## Done
