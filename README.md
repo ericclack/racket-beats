@@ -32,7 +32,8 @@ I should point out that I'm not a talented drummer!
 
 # To Do
 
-* Change volume of samples // explore whether rsound library would enable this and other features we might want
+* Change volume of samples 
+* Explore whether rsound library would enable this and other features we might want, see https://github.com/ericclack/racket-beats/tree/rsound
 * Play more than 2 tracks in parallel (drums, bass) etc
 
 ## Done
