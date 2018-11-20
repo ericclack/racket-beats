@@ -54,8 +54,17 @@
 (define (808-hh-o)     (p "wav/808_Hat_Open.wav"))
 (define (808-hh-p)     (p "wav/808_Hat_Pedal.wav"))
 
-(define (808-kick)     (p "wav/808_Kick_Short.wav"))
+(define (808-kick . args)     (apply p "wav/808_Kick_Short.wav" args))
 (define (808-kick-l)   (p "wav/808_Kick_Long.wav"))
 
-(define (p wav-file)
-  (play (rs-read wav-file)))
+(define sound-stream (make-pstream))
+
+(define (p wav-file . args)
+  ;; args is an optional list of (volume) ... more to come
+  ;; volume is 0-1
+  (let ([sound (rs-read wav-file)])
+    (if (> (length args) 0)
+        (pstream-play sound-stream (rs-scale (min 1 (first args))
+                                             sound))
+        (pstream-play sound-stream sound))))
+   
