@@ -21,8 +21,8 @@
     ; Each sound has its sample and own stream
     (define sound (rs-read file))
     (define stream (make-pstream))
-    (define (name . args)
-      (apply play-sound stream sound args))))
+    (define (name [volume 1] [pitch 1])
+      (play-sound stream sound volume pitch))))
 
 ;(define-sound clap "wav/clap_Dry_c.wav")
 ;(define-sound kick "wav/kick_Dry_b.wav")
@@ -58,11 +58,15 @@
 (define-sound 808-kick "wav/808_Kick_Short.wav")
 (define-sound 808-kick-l "wav/808_Kick_Long.wav")
 
-(define (play-sound stream sound . args)
-  ;; args is an optional list of (volume) ... more to come
-  ;; volume is 0-1
-    (if (> (length args) 0)
-        (pstream-play stream (rs-scale (min 1 (first args))
-                                             sound))
-        (pstream-play stream sound)))
+(define (play-sound stream sound [volume 1] [pitch 1])
+  ;; args is an optional list of alterations to the sound:
+  ;; volume is 0-1, with 1 being original volume
+  ;; pitch is a number to scale the pitch by, e.g. 0.5 or 2
 
+  (let* ([vsound (if (not (= volume 1))
+                     (rs-scale (min 1 volume) sound)
+                     sound)]
+         [psound (if (not (= pitch 1))
+                     (resample pitch vsound)
+                     vsound)])
+    (pstream-play stream psound)))
