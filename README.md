@@ -17,11 +17,11 @@ I should point out that I'm not a talented drummer!
 (bpm 120)
 
 (define (pattern1)
-  (clap)(hh) ;; Clap and High Hat played together
+  (808-clap)(808-cowbell) ;; Clap and cowbell played together
   (-1-) ;; wait a beat
-  (clap)
+  (808-clap)
   (-1-) ;; wait a beat
-  (clap)
+  (808-clap)
   (-1-) ;; wait a beat
   ;; rest
   (-1-))
