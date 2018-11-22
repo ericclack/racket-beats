@@ -12,7 +12,7 @@ I should point out that I'm not a talented drummer!
 
 ```
 #lang racket
-(require "lib/beats.rkt" "lib/samples.rkt")
+(require "lib/beats.rkt")
 
 (bpm 120)
 
@@ -32,15 +32,15 @@ I should point out that I'm not a talented drummer!
 
 # To Do
 
-* BPM - is the maths right especially with pause functions?
-* Change volume of samples
+* Change volume of samples 
+* Explore whether rsound library would enable this and other features we might want, see https://github.com/ericclack/racket-beats/tree/rsound
 * Play more than 2 tracks in parallel (drums, bass) etc
 
 ## Done
 
-* Play 2 tracks (drums, bass) etc
-* Can set BPM with `(bpm 180)`
-* Add generic n-times, where n is a natural number
+* Play 2 tracks (drums, bass) simultaneously 
+* Set BPM with `(bpm 180)`
+* Add generic repeat n-times, where n is a natural number
 
 # 
 
